@@ -8,5 +8,13 @@ class Scalar(Fish.Fish):
         self.height = 5
 
     def get_animal(self):
-        pass
-        return scalare
+        grid = [["*", "*", "*", "*", "*", "*", " ", " "],
+                [" ", " ", " ", " ", "*", "*", "*", " "],
+                [" ", " ", "*", "*", "*", "*", "*", "*"],
+                [" ", " ", " ", " ", "*", "*", "*", " "],
+                ["*", "*", "*", "*", "*", "*", " ", " "]]
+
+        if self.directionH == 0:
+            for row in grid:
+                row.reverse()
+        return grid

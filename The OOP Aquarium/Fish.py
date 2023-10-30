@@ -16,19 +16,19 @@ class Fish(Animal.Animal):
         return st
 
     def up(self):
-        pass
+        self.y -= 1
 
     def down(self):
-        pass
+        self.y += 1
 
     def starvation(self):
-        pass
-
-    def die(self):
-        pass
+        print(f"The fish {self.name} died at the age of {self.age} years\nBecause he ran out of food!")
 
     def get_directionV(self):
-        pass
+        return self.directionV
 
     def set_directionV(self, directionV):
-        pass
+        self.directionV = directionV
+
+    def die(self):
+        print(f"{self.name} died in good health")

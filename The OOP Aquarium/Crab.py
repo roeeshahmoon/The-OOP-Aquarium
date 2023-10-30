@@ -6,13 +6,16 @@ MAX_CRAB_WIDTH = 7
 
 class Crab(Animal.Animal):
     def __init__(self, name, age, x, y, directionH):
-        pass
+        super().__init__(name, age, x, y, directionH)
 
     def __str__(self):
-        pass
+        st = f"The crab {self.name} is {self.age} years old and has {self.food} food"
+        return st
 
     def starvation(self):
-        pass
+        print(f"The crab {self.name} died at the age of {self.age} years\nBecause he ran out of food!")
 
     def die(self):
-        pass
+         print(f"{self.name} died in good health")
+
+

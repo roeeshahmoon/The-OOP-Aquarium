@@ -7,7 +7,7 @@ MAX_AGE = 120
 class Animal:
     def __init__(self, name, age, x, y, directionH):
         self.alive = True
-        self.width = MAX_ANIMAL_HEIGHT
+        self.width = MAX_ANIMAL_WIDTH
         self.height = MAX_ANIMAL_HEIGHT
         self.food = STARTING_FOOD
         self.name = name
@@ -20,55 +20,55 @@ class Animal:
         pass
 
     def get_food(self):
-        pass
+        return self.food
 
     def get_age(self):
-        pass
+        return self.age
 
     def dec_food(self):
-        pass
+        self.food -= 1
 
     def inc_age(self):
-        pass
+        self.age += 1
 
     def right(self):
-        pass
+        self.x += 1
 
     def left(self):
-        pass
+        self.x -= 1
 
     def get_position(self):
-        pass
+        return self.x, self.y
 
     def set_x(self, x):
-        pass
+        self.x = x
 
     def set_y(self, y):
-        pass
+        self.y = y
 
     def starvation(self):
         pass
 
     def die(self):
-        pass
+        print(self.name + " died in good health")
 
     def get_directionH(self):
-        pass
+        return self.directionH
 
     def set_directionH(self, directionH):
-        pass
+        self.directionH = directionH
 
     def get_alive(self):
-        pass
+        return 0 < self.food and self.age < 120
 
     def get_size(self):
-        pass
+        return self.width, self.height
 
     def get_food_amount(self):
-        pass
+        return self.food
 
     def add_food(self, amount):
-        pass
+        self.food += amount
 
     def get_animal(self):
         pass
